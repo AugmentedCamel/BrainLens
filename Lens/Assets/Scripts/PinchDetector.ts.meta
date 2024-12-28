@@ -16,7 +16,9 @@
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
 - !<TypeScriptAssetData/9bf09892-ebd9-4e1d-a643-2b386eee3be4>
   SvgIcon: ""
-  Description: ""
+  Description: |
+    Detects Pinch and Releases from right and left hand and activates events
+
   InternalVersion: 0
   VersionMajor: 0
   VersionMinor: 0
