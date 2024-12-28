@@ -1,0 +1,95 @@
+- !<AssetImportMetadata/cde3cd10-18dd-4461-a6eb-5be5f720df9e>
+  ImportedAssetIds:
+    ObjectPrefab: !<reference> ebf36cfa-9820-4e53-bd14-e4d36fb58467
+  ImporterName: ObjectPrefabImporter
+  PrimaryAsset: !<reference> ebf36cfa-9820-4e53-bd14-e4d36fb58467
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    ObjectPrefab: !<own> c2df7dee-caa1-4e2e-849f-1d23508d23b3
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings/b82cb8d8-0554-428b-9acb-317c1375329b>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<SceneObject/66ad7d86-6561-4ff7-a161-aad1eb8eb8db>
+  PrefabRemaps:
+    []
+  Name: Sphere
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 10.000000, y: 10.000000, z: 10.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 8e5f24e3-948e-4eb0-ae13-e6731ffb9f20
+- !<SceneObject/7aabacb9-a154-4a73-be2b-9127037c01c3>
+  PrefabRemaps:
+    []
+  Name: Visuals
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> 66ad7d86-6561-4ff7-a161-aad1eb8eb8db
+  Components:
+    []
+- !<RenderMeshVisual/8e5f24e3-948e-4eb0-ae13-e6731ffb9f20>
+  PrefabRemaps:
+    []
+  Name: Render Mesh Visual
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 4655702f-6cee-4aa7-934c-6f12639ace54
+  Mesh: !<reference> fa46227b-63fd-44e9-8e61-22bfe1618f19
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<ObjectPrefab/a8ade55b-3f04-499d-9963-f709e7eee36d>
+  PackagePath: ""
+  objects:
+    - !<own> e1f1c1e4-e8bb-4745-8b6f-644fa83aeda0
+  LazyLoading: false
+  RetainAssets: true
+- !<ObjectPrefabAssetData/c2df7dee-caa1-4e2e-849f-1d23508d23b3>
+  SourceRemaps:
+    - 227dc9f3-41b2-438e-82f4-c6fbd9e19c09: 8e5f24e3-948e-4eb0-ae13-e6731ffb9f20
+    - 3822ad62-cc1f-4d0b-ac76-8d589b2427d6: 66ad7d86-6561-4ff7-a161-aad1eb8eb8db
+    - c73d60a5-15c3-41fc-86af-6a91d5f52604: e1f1c1e4-e8bb-4745-8b6f-644fa83aeda0
+    - d8c034bd-0aad-4ae5-815d-52888d2f5a04: 7aabacb9-a154-4a73-be2b-9127037c01c3
+    - ebf36cfa-9820-4e53-bd14-e4d36fb58467: a8ade55b-3f04-499d-9963-f709e7eee36d
+  SourceState: !<own> a8ade55b-3f04-499d-9963-f709e7eee36d
+- !<SceneObject/e1f1c1e4-e8bb-4745-8b6f-644fa83aeda0>
+  PrefabRemaps:
+    []
+  Name: EmptyBubble
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: -90.321274}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> 7aabacb9-a154-4a73-be2b-9127037c01c3
+  Components:
+    []

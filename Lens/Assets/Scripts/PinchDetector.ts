@@ -2,36 +2,52 @@ import { SIK } from 'Resources/SpectaclesInteractionKit/SIK';
 
 @component
 export class ExampleHandScript extends BaseScriptComponent {
+  
+  @input objectPrefab:ObjectPrefab;
+  
+  bubbleStartPoint: vec3;
+  latestBubble: SceneObject;
+
+  private handInputData = SIK.HandInputData;
+  private rightHand = this.handInputData.getHand('right');
+  isPinching: boolean;
+  
+ 
+  
   onAwake() {
-    this.createEvent('OnStartEvent').bind(() => {
-      this.onStart();
-    });
+    this.createEvent("UpdateEvent").bind(this.onUpdate.bind(this))
+    this.rightHand.onPinchDown.add(this.onTriggerDown.bind(this))
+    this.rightHand.onPinchUp.add(this.onTriggerUp.bind(this))
+    
+    this.createEvent("TapEvent").bind(() => {
+      // let body = this.debugBall.getComponent("Physics.BodyComponent")
+      // body.addForce(new vec3(0, 1, 0), Physics.ForceMode.Impulse)
+      this.onTriggerDown()
+      this.onTriggerUp()
+    })
   }
-
-  onStart() {
-    // Retrieve HandInputData from SIK's definitions.
-    let handInputData = SIK.HandInputData;
-
-    // Fetch the TrackedHand for left and right hands.
-    let leftHand = handInputData.getHand('left');
-    let rightHand = handInputData.getHand('right');
-
-    // Add print callbacks for whenever these hands pinch.
-    leftHand.onPinchDown.add(() => {
-      print(
-        `The left hand has pinched. The tip of the left index finger is: ${leftHand.indexTip.position}.`
-      );
-    });
-    rightHand.onPinchDown.add(() => {
-      print(
-        `The right hand has pinched. The tip of the right index finger is: ${rightHand.indexTip.position}.`
-      );
-    });
-    leftHand.onPinchUp.add(() => {
-      print(`The left hand has unpinched.`);
-    })
-    rightHand.onPinchUp.add(() => {
-      print(`The right hand has unpinched.`)
-    })
+  
+  onUpdate() {
+    if (this.isPinching) {
+      this.latestBubble.getTransform().setWorldPosition(this.rightHand.thumbPad.position);
+      // this should be done with smoothfollower
+    }
+  }
+  
+  onTriggerDown() {
+    this.isPinching = true;
+    print(`DOWN`);
+    this.bubbleStartPoint = this.rightHand.thumbPad.position;
+    this.latestBubble = this.objectPrefab.instantiate(this.sceneObject);
+    this.latestBubble.getTransform().setWorldPosition(this.bubbleStartPoint)
+    
+    // do physic things
+  }
+  
+  onTriggerUp() {
+    this.isPinching = false;
+    print(`RELEASED`);
+    this.latestBubble = null;
+    //should set new target for smooth follower bubble that is on the same location and or the bubbl follows a bubbletarget
   }
 }

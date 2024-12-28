@@ -1,0 +1,389 @@
+- !<ObjectPrefab/e5f6fb9d-42ae-4e4a-b6e8-a383807935e9>
+  PackagePath: SmoothFollower3D__PLACE_IN_OBJECTS_PANEL
+  objects:
+    - !<own> 901a22eb-3251-45f9-9e49-be8d9fd36793
+  LazyLoading: false
+  RetainAssets: true
+- !<ScriptComponent/04e4f1dc-3b33-4302-a718-c30c9b1e23cb>
+  PrefabRemaps:
+    []
+  Name: SmoothFollower
+  Enabled: true
+  ScriptAsset: !<reference> 7e5f91ca-e23d-491b-9549-96fa07d8a8a1
+  ScriptInputsDefault:
+    followPosition: true
+    maxPosSpeed: true
+    posDamping: true
+    posMode: true
+    followRotation: true
+    maxRotSpeed: true
+    rotDamping: true
+    rotMode: true
+    maxScaleSpeed: true
+    scaleDamping: true
+    scaleMode: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      follower: !<reference.SceneObject> 493a144b-62ed-4932-aae2-9f11d0cb127b
+      target: !<reference.SceneObject> 054e29fb-4338-4825-b974-184f5952b9fe
+      followPosition: true
+      maxPosSpeed: !<float> 50.000000
+      posDamping: !<float> 5.000000
+      posMode: 0
+      followRotation: true
+      maxRotSpeed: !<float> 50.000000
+      rotDamping: !<float> 5.000000
+      rotMode: 0
+      followScale: false
+      maxScaleSpeed: !<float> 50.000000
+      scaleDamping: !<float> 5.000000
+      scaleMode: 0
+  ScriptTypes:
+    "":
+      {}
+- !<SceneObject/054e29fb-4338-4825-b974-184f5952b9fe>
+  PrefabRemaps:
+    []
+  Name: Follower 1
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 9.066223, y: 22.890205, z: 0.000000}
+    rotation: {x: -156.335022, y: -33.922535, z: 102.129890}
+    scale: {x: 0.037500, y: 0.037500, z: 0.037500}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 8400ef7f-239a-4342-8d0e-56f3f368f30c
+    - !<own> a17b5349-ee55-4930-b11e-f7f4ff820c98
+- !<SceneObject/2b923e16-ebd6-4530-a26a-5b401c88693f>
+  PrefabRemaps:
+    []
+  Name: "Smooth Follow [DUPLICATE_ME]"
+  Enabled: false
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 9d30892f-abfe-4b62-a2e8-4e39ef5cc604
+- !<SceneObject/493a144b-62ed-4932-aae2-9f11d0cb127b>
+  PrefabRemaps:
+    []
+  Name: Follower 2
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 9.066223, y: 22.890205, z: 0.000000}
+    rotation: {x: -156.335022, y: -33.922535, z: 102.129890}
+    scale: {x: 0.025000, y: 0.025000, z: 0.025000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> bc47b617-32d4-4c06-9190-3724d44139e3
+    - !<own> 04e4f1dc-3b33-4302-a718-c30c9b1e23cb
+- !<SceneObject/5b272c37-9e45-4d7d-8dc2-bd75d9051c5f>
+  PrefabRemaps:
+    []
+  Name: Follower 3
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 9.066223, y: 22.890205, z: 0.000000}
+    rotation: {x: -156.335022, y: -33.922535, z: 102.129890}
+    scale: {x: 0.012500, y: 0.012500, z: 0.012500}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 931bb727-79d2-4534-a5eb-e65c5847484e
+    - !<own> 74266637-3b8c-438d-8e70-b7e183599aff
+- !<RenderMeshVisual/65ee2d89-17ad-4e5f-8ef1-bfcb008d1238>
+  PrefabRemaps:
+    []
+  Name: component_0
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 3286701f-8f5b-4f89-9c0e-48cb6446d74a
+  Mesh: !<reference> 30157a80-8d3d-4256-a574-0585b5b3496b
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<AnimationMixer/7125a40f-c050-4314-8870-9cc0ba55b765>
+  PrefabRemaps:
+    []
+  Name: component_2
+  Enabled: true
+  Layers:
+    - !<reference> 6b8a38d6-31fe-460f-a88a-5a4b76b85f84
+  Autoplay: true
+  Version: FBX
+- !<ScriptComponent/74266637-3b8c-438d-8e70-b7e183599aff>
+  PrefabRemaps:
+    []
+  Name: SmoothFollower
+  Enabled: true
+  ScriptAsset: !<reference> 7e5f91ca-e23d-491b-9549-96fa07d8a8a1
+  ScriptInputsDefault:
+    followPosition: true
+    maxPosSpeed: true
+    posDamping: true
+    posMode: true
+    followRotation: true
+    maxRotSpeed: true
+    rotDamping: true
+    rotMode: true
+    maxScaleSpeed: true
+    scaleDamping: true
+    scaleMode: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      follower: !<reference.SceneObject> 5b272c37-9e45-4d7d-8dc2-bd75d9051c5f
+      target: !<reference.SceneObject> 493a144b-62ed-4932-aae2-9f11d0cb127b
+      followPosition: true
+      maxPosSpeed: !<float> 50.000000
+      posDamping: !<float> 5.000000
+      posMode: 0
+      followRotation: true
+      maxRotSpeed: !<float> 50.000000
+      rotDamping: !<float> 5.000000
+      rotMode: 0
+      followScale: false
+      maxScaleSpeed: !<float> 50.000000
+      scaleDamping: !<float> 5.000000
+      scaleMode: 0
+  ScriptTypes:
+    "":
+      {}
+- !<SceneObject/745c5c38-c018-4986-a085-588b7622a2c4>
+  PrefabRemaps:
+    []
+  Name: target_animated
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: -48.076271}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 0.050000, y: 0.050000, z: 0.050000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> 9631a578-6b21-4a3f-b33f-74114e0f201b
+  Components:
+    - !<own> 7125a40f-c050-4314-8870-9cc0ba55b765
+- !<RenderMeshVisual/8400ef7f-239a-4342-8d0e-56f3f368f30c>
+  PrefabRemaps:
+    []
+  Name: Mesh Visual 1
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> ba45bf18-48a2-4c7f-8779-30a7f41fa488
+  Mesh: !<reference> 30157a80-8d3d-4256-a574-0585b5b3496b
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<SceneObject/901a22eb-3251-45f9-9e49-be8d9fd36793>
+  PrefabRemaps:
+    []
+  Name: SmoothFollower3D__PLACE_IN_OBJECTS_PANEL
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> 2b923e16-ebd6-4530-a26a-5b401c88693f
+    - !<own> ae13b8c7-5bf7-4923-b22e-07b208394878
+  Components:
+    []
+- !<RenderMeshVisual/931bb727-79d2-4534-a5eb-e65c5847484e>
+  PrefabRemaps:
+    []
+  Name: Mesh Visual 1
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> c7af24b5-d4f5-4ee4-bce1-2623f5a7262f
+  Mesh: !<reference> 30157a80-8d3d-4256-a574-0585b5b3496b
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<SceneObject/9631a578-6b21-4a3f-b33f-74114e0f201b>
+  PrefabRemaps:
+    []
+  Name: Target
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: -1000.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 65ee2d89-17ad-4e5f-8ef1-bfcb008d1238
+    - !<own> e38954ed-bf26-4380-bdd5-a4cb9f6a5d2d
+- !<ScriptComponent/9d30892f-abfe-4b62-a2e8-4e39ef5cc604>
+  PrefabRemaps:
+    []
+  Name: SmoothFollower
+  Enabled: true
+  ScriptAsset: !<reference> 7e5f91ca-e23d-491b-9549-96fa07d8a8a1
+  ScriptInputsDefault:
+    follower: true
+    target: true
+    followPosition: true
+    maxPosSpeed: true
+    posDamping: true
+    posMode: true
+    followRotation: true
+    maxRotSpeed: true
+    rotDamping: true
+    rotMode: true
+    followScale: true
+    maxScaleSpeed: true
+    scaleDamping: true
+    scaleMode: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      follower: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      target: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      followPosition: true
+      maxPosSpeed: !<float> 50.000000
+      posDamping: !<float> 5.000000
+      posMode: 0
+      followRotation: true
+      maxRotSpeed: !<float> 50.000000
+      rotDamping: !<float> 5.000000
+      rotMode: 0
+      followScale: true
+      maxScaleSpeed: !<float> 50.000000
+      scaleDamping: !<float> 5.000000
+      scaleMode: 0
+  ScriptTypes:
+    "":
+      {}
+- !<ScriptComponent/a17b5349-ee55-4930-b11e-f7f4ff820c98>
+  PrefabRemaps:
+    []
+  Name: SmoothFollower
+  Enabled: true
+  ScriptAsset: !<reference> 7e5f91ca-e23d-491b-9549-96fa07d8a8a1
+  ScriptInputsDefault:
+    followPosition: true
+    maxPosSpeed: true
+    posDamping: true
+    posMode: true
+    followRotation: true
+    maxRotSpeed: true
+    rotDamping: true
+    rotMode: true
+    maxScaleSpeed: true
+    scaleDamping: true
+    scaleMode: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      follower: !<reference.SceneObject> 054e29fb-4338-4825-b974-184f5952b9fe
+      target: !<reference.SceneObject> 9631a578-6b21-4a3f-b33f-74114e0f201b
+      followPosition: true
+      maxPosSpeed: !<float> 50.000000
+      posDamping: !<float> 5.000000
+      posMode: 0
+      followRotation: true
+      maxRotSpeed: !<float> 50.000000
+      rotDamping: !<float> 5.000000
+      rotMode: 0
+      followScale: false
+      maxScaleSpeed: !<float> 50.000000
+      scaleDamping: !<float> 5.000000
+      scaleMode: 0
+  ScriptTypes:
+    "":
+      {}
+- !<SceneObject/ae13b8c7-5bf7-4923-b22e-07b208394878>
+  PrefabRemaps:
+    []
+  Name: Demo
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> 054e29fb-4338-4825-b974-184f5952b9fe
+    - !<own> 493a144b-62ed-4932-aae2-9f11d0cb127b
+    - !<own> 5b272c37-9e45-4d7d-8dc2-bd75d9051c5f
+    - !<own> 745c5c38-c018-4986-a085-588b7622a2c4
+  Components:
+    []
+- !<RenderMeshVisual/bc47b617-32d4-4c06-9190-3724d44139e3>
+  PrefabRemaps:
+    []
+  Name: Mesh Visual 1
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> b43f74dd-5ac7-4896-ab9a-7df9448cfdac
+  Mesh: !<reference> 30157a80-8d3d-4256-a574-0585b5b3496b
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<Animation/e38954ed-bf26-4380-bdd5-a4cb9f6a5d2d>
+  PrefabRemaps:
+    []
+  Name: component_1
+  Enabled: true
+  AnimationLayers:
+    Layer0: !<reference> 5ccd10a7-a781-45ce-aba2-b29c9f1cfe3a
