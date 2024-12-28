@@ -1,0 +1,7 @@
+- !<Filter/f5664674-4501-4b3e-9d14-0a084770866e>
+  PackagePath: ""
+  IncludeStatic: true
+  IncludeDynamic: true
+  IncludeIntangible: false
+  OnlyLayers: 0
+  SkipLayers: 0

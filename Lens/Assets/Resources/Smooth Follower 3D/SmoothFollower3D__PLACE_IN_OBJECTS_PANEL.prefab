@@ -1,5 +1,5 @@
 - !<ObjectPrefab/e5f6fb9d-42ae-4e4a-b6e8-a383807935e9>
-  PackagePath: SmoothFollower3D__PLACE_IN_OBJECTS_PANEL
+  PackagePath: ""
   objects:
     - !<own> 901a22eb-3251-45f9-9e49-be8d9fd36793
   LazyLoading: false

@@ -6,7 +6,7 @@
   PackageType: NotAPackage
   PackagePolicy: CannotBeUnpacked
   ExtraData:
-    {}
+    AssetLibraryId: 4pevbdTmgtFUFIbbkZWU7b
   AssetDataMap:
     JavaScriptAsset: !<own> 3a275080-3f10-401e-9a99-099344f4d3f2
   DependentFiles:

@@ -14,6 +14,43 @@
   ImporterSettings: !<AssetImporterSettings/b82cb8d8-0554-428b-9acb-317c1375329b>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ScriptComponent/1747867f-0efd-49f2-b59d-53519900eed4>
+  PrefabRemaps:
+    []
+  Name: SmoothFollower
+  Enabled: true
+  ScriptAsset: !<reference> 7e5f91ca-e23d-491b-9549-96fa07d8a8a1
+  ScriptInputsDefault:
+    followPosition: true
+    posDamping: true
+    posMode: true
+    maxRotSpeed: true
+    rotDamping: true
+    rotMode: true
+    maxScaleSpeed: true
+    scaleDamping: true
+    scaleMode: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      follower: !<reference.SceneObject> 7aabacb9-a154-4a73-be2b-9127037c01c3
+      target: !<reference.SceneObject> e1f1c1e4-e8bb-4745-8b6f-644fa83aeda0
+      followPosition: true
+      maxPosSpeed: !<float> 1000.000000
+      posDamping: !<float> 5.000000
+      posMode: 0
+      followRotation: false
+      maxRotSpeed: !<float> 50.000000
+      rotDamping: !<float> 5.000000
+      rotMode: 0
+      followScale: false
+      maxScaleSpeed: !<float> 50.000000
+      scaleDamping: !<float> 5.000000
+      scaleMode: 0
+  ScriptTypes:
+    "":
+      {}
 - !<SceneObject/66ad7d86-6561-4ff7-a161-aad1eb8eb8db>
   PrefabRemaps:
     []
@@ -29,10 +66,26 @@
     []
   Components:
     - !<own> 8e5f24e3-948e-4eb0-ae13-e6731ffb9f20
+- !<ScriptComponent/681c4fc3-1371-4a0b-9ea6-3c00e270a05b>
+  PrefabRemaps:
+    []
+  Name: Bubble
+  Enabled: true
+  ScriptAsset: !<reference> e69376b5-065a-4838-9444-42550f71858a
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      {}
+  ScriptTypes:
+    "":
+      {}
 - !<SceneObject/7aabacb9-a154-4a73-be2b-9127037c01c3>
   PrefabRemaps:
     []
-  Name: Visuals
+  Name: FollowingContainer
   Enabled: true
   Layers: 1
   LocalTransform:
@@ -43,7 +96,7 @@
   Children:
     - !<own> 66ad7d86-6561-4ff7-a161-aad1eb8eb8db
   Components:
-    []
+    - !<own> 1747867f-0efd-49f2-b59d-53519900eed4
 - !<RenderMeshVisual/8e5f24e3-948e-4eb0-ae13-e6731ffb9f20>
   PrefabRemaps:
     []
@@ -74,6 +127,8 @@
   SourceRemaps:
     - 227dc9f3-41b2-438e-82f4-c6fbd9e19c09: 8e5f24e3-948e-4eb0-ae13-e6731ffb9f20
     - 3822ad62-cc1f-4d0b-ac76-8d589b2427d6: 66ad7d86-6561-4ff7-a161-aad1eb8eb8db
+    - 4518d405-ec2d-473a-8752-a9f265ac7eab: 681c4fc3-1371-4a0b-9ea6-3c00e270a05b
+    - 80996347-6c14-439b-9a58-8fb3a977f2f5: 1747867f-0efd-49f2-b59d-53519900eed4
     - c73d60a5-15c3-41fc-86af-6a91d5f52604: e1f1c1e4-e8bb-4745-8b6f-644fa83aeda0
     - d8c034bd-0aad-4ae5-815d-52888d2f5a04: 7aabacb9-a154-4a73-be2b-9127037c01c3
     - ebf36cfa-9820-4e53-bd14-e4d36fb58467: a8ade55b-3f04-499d-9963-f709e7eee36d
@@ -92,4 +147,4 @@
   Children:
     - !<own> 7aabacb9-a154-4a73-be2b-9127037c01c3
   Components:
-    []
+    - !<own> 681c4fc3-1371-4a0b-9ea6-3c00e270a05b

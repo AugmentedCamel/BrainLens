@@ -39,6 +39,59 @@
     []
   Components:
     - !<own> 227dc9f3-41b2-438e-82f4-c6fbd9e19c09
+- !<ScriptComponent/4518d405-ec2d-473a-8752-a9f265ac7eab>
+  PrefabRemaps:
+    []
+  Name: Bubble
+  Enabled: true
+  ScriptAsset: !<reference> e69376b5-065a-4838-9444-42550f71858a
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      {}
+  ScriptTypes:
+    "":
+      {}
+- !<ScriptComponent/80996347-6c14-439b-9a58-8fb3a977f2f5>
+  PrefabRemaps:
+    []
+  Name: SmoothFollower
+  Enabled: true
+  ScriptAsset: !<reference> 7e5f91ca-e23d-491b-9549-96fa07d8a8a1
+  ScriptInputsDefault:
+    followPosition: true
+    posDamping: true
+    posMode: true
+    maxRotSpeed: true
+    rotDamping: true
+    rotMode: true
+    maxScaleSpeed: true
+    scaleDamping: true
+    scaleMode: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      follower: !<reference.SceneObject> d8c034bd-0aad-4ae5-815d-52888d2f5a04
+      target: !<reference.SceneObject> c73d60a5-15c3-41fc-86af-6a91d5f52604
+      followPosition: true
+      maxPosSpeed: !<float> 1000.000000
+      posDamping: !<float> 5.000000
+      posMode: 0
+      followRotation: false
+      maxRotSpeed: !<float> 50.000000
+      rotDamping: !<float> 5.000000
+      rotMode: 0
+      followScale: false
+      maxScaleSpeed: !<float> 50.000000
+      scaleDamping: !<float> 5.000000
+      scaleMode: 0
+  ScriptTypes:
+    "":
+      {}
 - !<SceneObject/c73d60a5-15c3-41fc-86af-6a91d5f52604>
   PrefabRemaps:
     []
@@ -53,11 +106,11 @@
   Children:
     - !<own> d8c034bd-0aad-4ae5-815d-52888d2f5a04
   Components:
-    []
+    - !<own> 4518d405-ec2d-473a-8752-a9f265ac7eab
 - !<SceneObject/d8c034bd-0aad-4ae5-815d-52888d2f5a04>
   PrefabRemaps:
     []
-  Name: Visuals
+  Name: FollowingContainer
   Enabled: true
   Layers: 1
   LocalTransform:
@@ -68,4 +121,4 @@
   Children:
     - !<own> 3822ad62-cc1f-4d0b-ac76-8d589b2427d6
   Components:
-    []
+    - !<own> 80996347-6c14-439b-9a58-8fb3a977f2f5

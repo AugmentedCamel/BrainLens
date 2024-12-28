@@ -4,6 +4,7 @@ import { SIK } from 'Resources/SpectaclesInteractionKit/SIK';
 export class ExampleHandScript extends BaseScriptComponent {
   
   @input objectPrefab:ObjectPrefab;
+  //@input handFollower:SceneObject;
   
   bubbleStartPoint: vec3;
   latestBubble: SceneObject;
@@ -29,6 +30,7 @@ export class ExampleHandScript extends BaseScriptComponent {
   
   onUpdate() {
     if (this.isPinching) {
+      
       this.latestBubble.getTransform().setWorldPosition(this.rightHand.thumbPad.position);
       // this should be done with smoothfollower
     }

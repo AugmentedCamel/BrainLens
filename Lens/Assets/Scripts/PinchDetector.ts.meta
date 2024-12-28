@@ -28,16 +28,13 @@
   CurrentVisibility: Editable
   MaxVisibility: Editable
   ScriptInputsHidden:
-    debugText: false
     objectPrefab: false
   ScriptTypesHidden:
     {}
   DefaultScriptInputs:
     - objectPrefab: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
-      debugText: !<reference.Text> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
   InputLines:
     - // @input Asset.ObjectPrefab objectPrefab
-    - // @input Component.Text debugText
