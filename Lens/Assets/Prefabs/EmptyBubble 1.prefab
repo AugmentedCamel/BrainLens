@@ -19,6 +19,7 @@
     - !<own> 430a759d-f915-4122-b3ab-a0c5547ba857
   Components:
     - !<own> 2f09c7c0-2839-44d2-bf0a-66ac8194cc9a
+    - !<own> 952a3e55-789a-47c1-abf4-05fdf400dcd8
 - !<ScriptComponent/2492ce40-d9c7-46ac-b165-15edb014729e>
   PrefabRemaps:
     []
@@ -27,9 +28,7 @@
   ScriptAsset: !<reference> 7e5f91ca-e23d-491b-9549-96fa07d8a8a1
   ScriptInputsDefault:
     followPosition: true
-    posDamping: true
     posMode: true
-    followRotation: true
     maxRotSpeed: true
     rotDamping: true
     rotMode: true
@@ -44,9 +43,9 @@
       target: !<reference.SceneObject> 23216678-f698-44c7-9dc5-6a46d23047a8
       followPosition: true
       maxPosSpeed: !<float> 5000.000000
-      posDamping: !<float> 5.000000
+      posDamping: -6.500000
       posMode: 0
-      followRotation: true
+      followRotation: false
       maxRotSpeed: !<float> 50.000000
       rotDamping: !<float> 5.000000
       rotMode: 0
@@ -109,7 +108,7 @@
   Dynamic: true
   BodySetting: Density
   BodySettingValue: 1.000000
-  Damping: 0.020000
+  Damping: 0.010000
   AngularDamping: 0.020000
 - !<SceneObject/8afd13cc-c81e-432e-932d-95fdbcaf7800>
   PrefabRemaps:
@@ -128,6 +127,24 @@
     - !<own> b30354a9-f426-446b-b140-85d8ec99ad5c
     - !<own> a0794cad-64e2-492d-99cd-699bc5081e53
     - !<own> 85f4d94b-b2e1-488a-88ad-d87b373c8848
+- !<ColliderComponent/952a3e55-789a-47c1-abf4-05fdf400dcd8>
+  PrefabRemaps:
+    []
+  Name: Physics Collider
+  Enabled: true
+  Shape: !<Sphere>
+    FitVisual: true
+    Radius: 6.000000
+  Matter: !<reference> 00000000-0000-0000-0000-000000000000
+  Filter: !<reference> b08de880-5375-4efe-ba3b-3af4761a6852
+  OverlapFilter: !<reference> 00000000-0000-0000-0000-000000000000
+  WorldSettings: !<reference> f2679a87-7b45-4b6e-8dfd-658d49537c90
+  EnableSmoothing: false
+  PositionTension: 30.000000
+  RotationTension: 30.000000
+  ForceCompound: false
+  Intangible: true
+  ShowCollider: true
 - !<ColliderComponent/a0794cad-64e2-492d-99cd-699bc5081e53>
   PrefabRemaps:
     []
@@ -145,7 +162,7 @@
   RotationTension: 30.000000
   ForceCompound: false
   Intangible: false
-  ShowCollider: true
+  ShowCollider: false
 - !<RenderMeshVisual/b30354a9-f426-446b-b140-85d8ec99ad5c>
   PrefabRemaps:
     []

@@ -68,7 +68,7 @@
   RotationTension: 30.000000
   ForceCompound: false
   Intangible: false
-  ShowCollider: true
+  ShowCollider: false
 - !<ScriptComponent/6e6bb760-c07a-45cb-a23b-67785f0e9424>
   PrefabRemaps:
     []
@@ -77,9 +77,7 @@
   ScriptAsset: !<reference> 7e5f91ca-e23d-491b-9549-96fa07d8a8a1
   ScriptInputsDefault:
     followPosition: true
-    posDamping: true
     posMode: true
-    followRotation: true
     maxRotSpeed: true
     rotDamping: true
     rotMode: true
@@ -94,9 +92,9 @@
       target: !<reference.SceneObject> d83707e5-8c9c-4e14-89b8-627238ec80bb
       followPosition: true
       maxPosSpeed: !<float> 5000.000000
-      posDamping: !<float> 5.000000
+      posDamping: -6.500000
       posMode: 0
-      followRotation: true
+      followRotation: false
       maxRotSpeed: !<float> 50.000000
       rotDamping: !<float> 5.000000
       rotMode: 0
@@ -115,6 +113,7 @@
     - 430a759d-f915-4122-b3ab-a0c5547ba857: 87926a8a-f7fc-4c0f-ae0f-c0e121cf8d54
     - 85f4d94b-b2e1-488a-88ad-d87b373c8848: d1d59750-eb1c-46b5-a86d-0cec828bf46b
     - 8afd13cc-c81e-432e-932d-95fdbcaf7800: 04933ab0-3e52-4887-9cde-ad28ba7fc6d9
+    - 952a3e55-789a-47c1-abf4-05fdf400dcd8: 9a578bcb-295c-4bbc-a085-60f51c74597b
     - a0794cad-64e2-492d-99cd-699bc5081e53: 45d4060e-622a-4b3a-a9ee-26c3f7658f8c
     - b30354a9-f426-446b-b140-85d8ec99ad5c: 24a06552-aa34-4d27-8756-1efed319673f
     - c831a969-4b40-4dbe-a145-24f00f8782ee: 8a0469a9-2a8f-433e-b285-5a4f97eb6bc9
@@ -140,6 +139,24 @@
     - !<own> d83707e5-8c9c-4e14-89b8-627238ec80bb
   LazyLoading: false
   RetainAssets: true
+- !<ColliderComponent/9a578bcb-295c-4bbc-a085-60f51c74597b>
+  PrefabRemaps:
+    []
+  Name: Physics Collider
+  Enabled: true
+  Shape: !<Sphere>
+    FitVisual: true
+    Radius: 6.000000
+  Matter: !<reference> 00000000-0000-0000-0000-000000000000
+  Filter: !<reference> b08de880-5375-4efe-ba3b-3af4761a6852
+  OverlapFilter: !<reference> 00000000-0000-0000-0000-000000000000
+  WorldSettings: !<reference> f2679a87-7b45-4b6e-8dfd-658d49537c90
+  EnableSmoothing: false
+  PositionTension: 30.000000
+  RotationTension: 30.000000
+  ForceCompound: false
+  Intangible: true
+  ShowCollider: true
 - !<ScriptComponent/aed65937-2c54-4986-b982-88e1f1fba074>
   PrefabRemaps:
     []
@@ -177,7 +194,7 @@
   Dynamic: true
   BodySetting: Density
   BodySettingValue: 1.000000
-  Damping: 0.020000
+  Damping: 0.010000
   AngularDamping: 0.020000
 - !<SceneObject/d83707e5-8c9c-4e14-89b8-627238ec80bb>
   PrefabRemaps:
@@ -194,3 +211,4 @@
     - !<own> 87926a8a-f7fc-4c0f-ae0f-c0e121cf8d54
   Components:
     - !<own> aed65937-2c54-4986-b982-88e1f1fba074
+    - !<own> 9a578bcb-295c-4bbc-a085-60f51c74597b

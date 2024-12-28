@@ -20,8 +20,8 @@ metaInfo:
   hints:
     []
   tags:
-    []
-  lensName: Specs Starter
+    - DRQLS24
+  lensName: Bubble Physics
   lensDescriptors:
     []
   lensApplicability:
@@ -30,7 +30,7 @@ metaInfo:
   lensClientCompatibilities:
     - Spectacles
   platformBundlesEnabled: false
-  iconHash: ""
+  iconHash: 584d6fef5275cda68b93386a10ddfa61
   videoPreviewHash: ""
   fromTemplateName: Spectacles
   fromTemplateUrl: Lens Studio 5.4.0.24121706

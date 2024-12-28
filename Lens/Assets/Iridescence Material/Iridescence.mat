@@ -19,6 +19,9 @@
     - Port_GSplatPointSize_N004:
         typeIdx: 1
         value: 0.000000
+    - Port_Input2_N040:
+        typeIdx: 1
+        value: 1.000000
     - Port_LODValue_N029:
         typeIdx: 1
         value: 0.000000
@@ -88,18 +91,6 @@
     - mainColor:
         typeIdx: 5
         value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-    - opacityTexture:
-        typeIdx: 9
-        value:
-          id: 996c6f4e-b2ad-4117-9e3e-3db82e6e97f5
-          sampler:
-            filteringMode: Trilinear
-            wrapModeU: Repeat
-            wrapModeV: Repeat
-            wrapModeW: Repeat
-            borderColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
-            mipmaps: false
-          type: Texture2D
     - receivesRayTracedAo:
         typeIdx: 2
         value: false
@@ -123,7 +114,7 @@
   FrustumCullPad: 0.000000
   InstanceCount: 1
   Defines:
-    []
+    - Tweak_N38
   BlendMode: PremultipliedAlphaAuto
   Properties:
     Port_AO_N006:
@@ -147,9 +138,6 @@
     Port_Input2_N021:
       typeIdx: 1
       value: 0.200000
-    Port_Input2_N040:
-      typeIdx: 1
-      value: 1.000000
     Port_Input2_N058:
       typeIdx: 1
       value: 1.000000
@@ -197,19 +185,31 @@
         type: Texture2D
     metallic:
       typeIdx: 1
-      value: 0.790000
+      value: 0.330000
     mixAmount:
       typeIdx: 1
-      value: 0.450000
+      value: 0.170000
     noiseIntensity:
       typeIdx: 1
       value: 0.520000
     noiseScale:
       typeIdx: 3
       value: {x: 1.000000, y: 1.000000}
+    opacityTexture:
+      typeIdx: 9
+      value:
+        id: cc585dde-46aa-45e6-b26d-31d1cf763872
+        sampler:
+          filteringMode: Trilinear
+          wrapModeU: Repeat
+          wrapModeV: Repeat
+          wrapModeW: Repeat
+          borderColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+          mipmaps: false
+        type: Texture2D
     roughness:
       typeIdx: 1
-      value: 0.540000
+      value: 0.370000
     thinFilmWeight:
       typeIdx: 1
       value: 0.220000
