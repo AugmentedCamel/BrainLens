@@ -15,6 +15,10 @@ function exampleCallback(eventArgs){
     // final transcription
     if(!eventArgs.isFinalTranscription) return;
     print("Final Transcription: " + eventArgs.transcription);
+
+    script.screenTextTranscription.text = eventArgs.transcription;
+    print("Transcription received: " + eventArgs.transcription);
+    triggerBehaviors(script.onFinalTranscriptionTriggeredGlobalBehaviors);
 }
 
 //@ui {"widget":"label"}
@@ -24,10 +28,54 @@ function exampleCallback(eventArgs){
 //@input string[] boosts
 //@input float boostsAmount {"min":1, "max":10}
 
+//@input bool transcripitonText 
+//@input Component.Text screenTextTranscription {"showIf":"transcripitonText", "label": "Transcription text component"}
 
+//@ui {"widget":"separator"}
+//@input bool editBehaviors {"label": "Edit Behaviors"}
+//@ui {"widget":"group_start", "label":"Voice Event Behaviors", "showIf":"editBehaviors"}
+//@input bool debug
+//@input Component.ScriptComponent[] onListeningEnabledGlobalBehaviors {"label":"On Listening Enabled"}
+//@input Component.ScriptComponent[] onListeningDisabledGlobalBehaviors {"label":"On Listening Disabled"}
+//@input Component.ScriptComponent[] onListeningTriggeredGlobalBehaviors {"label":"On Listening Triggered"}
+//@input Component.ScriptComponent[] onErrorTriggeredGlobalBehaviors {"label":"On Error Triggered"}
+//@input Component.ScriptComponent[] onFinalTranscriptionTriggeredGlobalBehaviors {"label":"On Final Transcription Triggered"}
+//@ui {"widget":"label","showIf":"useKeyword", "label":"NOTE: On Keyword Detected will be triggered"}
+//@ui {"widget":"label","showIf":"useKeyword", "label":"for all the keywords. For single keyword trigger,"}
+//@ui {"widget":"label","showIf":"useKeyword", "label":"please check the Send Trigger in each keyword"}
+//@ui {"widget":"label","showIf":"useKeyword", "label":"child under Keywords Object"}
+//@ui {"widget":"separator","showIf":"useKeyword"}
+//@input Component.ScriptComponent[] onKeywordTriggeredGlobalBehaviors {"showIf":"useKeyword", "label":"On Keyword Detected"}
+//@ui {"widget":"label","showIf":"useCommand", "label":"NOTE: On Command Detected will be triggered"}
+//@ui {"widget":"label","showIf":"useCommand", "label":"for all the commands. For single command trigger,"}
+//@ui {"widget":"label","showIf":"useCommand", "label":"please check the functions in the CommandHandler"}
+//@ui {"widget":"label","showIf":"useCommand", "label":"Script Component"}
+//@ui {"widget":"separator","showIf":"useCommand"}
+//@input Component.ScriptComponent[] onCommandTriggeredGlobalBehaviors {"showIf":"useCommand", "label":"On Command Detected"}
+//@input Component.ScriptComponent[] onVoiceSystemCommandTriggeredGlobalBehaviors {"showIf":"useSYSTEM_VOICE_COMMAND", "label":"On System Voice Command Detected"}
+//@ui {"widget":"group_end"}
+
+
+
+function triggerBehaviors(behaviors) {
+    if (!behaviors) {
+        return;
+    }
+
+    for (var i=0; i<behaviors.length; i++) {
+        if (behaviors[i] && behaviors[i].api.trigger) {
+            behaviors[i].api.trigger();
+        } else {
+            print("WARNING: please assign the Behavior Script Component");
+        }
+
+    }
+
+}
 
 
 global.startVoiceMLTranscribe = function(callback){
+    print("global.startVoiceMLTranscribe");
     if(!callback) callback = exampleCallback;
 
     var options = VoiceML.ListeningOptions.create();

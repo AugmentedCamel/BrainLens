@@ -1,15 +1,8 @@
+// -----JS CODE-----
+global.startVoiceMLTranscribe(callback);
 
-// A flag to ensure it runs only once
-var hasStarted = false;
-
-// Awake function that's triggered once
-function awake() {
-    if (!hasStarted) {
-        hasStarted = true; // Set the flag to prevent future calls
-        global.startVoiceMLTranscribe(callback); // Start transcription
-        print("log started")
-    }
-}
+//@input bool transcripitonText 
+//@input Component.Text screenTextTranscription {"showIf":"transcripitonText", "label": "Transcription text component"}
 
 function callback(eventArgs){
     // intermediate transcription
@@ -29,7 +22,6 @@ function callback(eventArgs){
     }
     // final transcription
     if(!eventArgs.isFinalTranscription) return;
-    print("Final Transcription: " + eventArgs.transcription);
+    print("Final BAD Transcription: " + eventArgs.transcription);
+    script.screenTextTranscription.text = eventArgs.transcription;
 }
-
-awake();

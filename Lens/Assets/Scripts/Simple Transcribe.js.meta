@@ -28,6 +28,18 @@
   ScriptInputsHidden:
     boosts: false
     boostsAmount: false
+    debug: false
+    editBehaviors: false
+    onCommandTriggeredGlobalBehaviors: false
+    onErrorTriggeredGlobalBehaviors: false
+    onFinalTranscriptionTriggeredGlobalBehaviors: false
+    onKeywordTriggeredGlobalBehaviors: false
+    onListeningDisabledGlobalBehaviors: false
+    onListeningEnabledGlobalBehaviors: false
+    onListeningTriggeredGlobalBehaviors: false
+    onVoiceSystemCommandTriggeredGlobalBehaviors: false
+    screenTextTranscription: false
+    transcripitonText: false
     vmlModule: false
   ScriptTypesHidden:
     {}
@@ -36,6 +48,26 @@
       boosts: !<string[]>
         []
       boostsAmount: !<float> 0.000000
+      transcripitonText: false
+      screenTextTranscription: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      onListeningEnabledGlobalBehaviors: !<reference.ScriptComponent[]>
+        []
+      onListeningDisabledGlobalBehaviors: !<reference.ScriptComponent[]>
+        []
+      onListeningTriggeredGlobalBehaviors: !<reference.ScriptComponent[]>
+        []
+      onErrorTriggeredGlobalBehaviors: !<reference.ScriptComponent[]>
+        []
+      onFinalTranscriptionTriggeredGlobalBehaviors: !<reference.ScriptComponent[]>
+        []
+      editBehaviors: false
+      debug: false
+      onKeywordTriggeredGlobalBehaviors: !<reference.ScriptComponent[]>
+        []
+      onCommandTriggeredGlobalBehaviors: !<reference.ScriptComponent[]>
+        []
+      onVoiceSystemCommandTriggeredGlobalBehaviors: !<reference.ScriptComponent[]>
+        []
   ScriptTypes:
     -
       {}
