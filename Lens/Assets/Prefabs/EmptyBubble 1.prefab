@@ -46,7 +46,7 @@
   BodySetting: Density
   BodySettingValue: 1.000000
   Damping: 0.060000
-  AngularDamping: 0.020000
+  AngularDamping: 1.000000
 - !<ScreenTransform/227a75c7-ea48-47e1-9fbb-a9ffcefe59f8>
   PrefabRemaps:
     []
@@ -210,6 +210,31 @@
   ScriptTypes:
     "":
       {}
+- !<ScriptComponent/24c3c42c-2c9a-401c-a0f6-a08e977332ad>
+  PrefabRemaps:
+    []
+  Name: Billboard
+  Enabled: true
+  ScriptAsset: !<reference> b5593251-a0da-4491-8561-2e0dccd715bc
+  ScriptInputsDefault:
+    _yAxisEnabled: true
+    _zAxisEnabled: true
+    _axisBufferDegrees: true
+    _axisEasing: true
+    duration: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      _xAxisEnabled: true
+      _yAxisEnabled: true
+      _zAxisEnabled: false
+      _axisBufferDegrees: !<Vec3> {x: 0.000000, y: 0.000000, z: 0.000000}
+      _axisEasing: !<Vec3> {x: 1.000000, y: 1.000000, z: 1.000000}
+      duration: 0.033000
+  ScriptTypes:
+    "":
+      {}
 - !<RenderMeshVisual/2733b85e-66ab-4223-8a77-010712677fac>
   PrefabRemaps:
     []
@@ -245,6 +270,7 @@
     - !<own> a30a21aa-7e97-4fe6-8abc-05faefe13f6d
   Components:
     - !<own> df2d876a-eef4-4877-a701-312ae86d3912
+    - !<own> 24c3c42c-2c9a-401c-a0f6-a08e977332ad
 - !<SceneObject/2dd0cbae-872b-4622-b9f7-20368ede6268>
   PrefabRemaps:
     []
@@ -410,20 +436,20 @@
   MeshShadowMode: None
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
-  Text: Text
+  Text: Text much longer than five words
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
   SizeToFit: false
-  FontSize: 48
+  FontSize: 60
   Font: !<reference> 00000000-0000-0000-0000-000000000000
   LayoutRect:
-    left: -7.500000
+    left: -3.100000
     bottom: -2.250000
-    right: 7.500000
+    right: 3.100000
     top: 2.250000
   OverflowVertical: Overflow
-  OverflowHorizontal: Overflow
+  OverflowHorizontal: Wrap
   Fill: !<TextFill>
     Mode: Solid
     Color: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
@@ -473,7 +499,7 @@
     LineSpacing: 1.000000
     CapitalizationOverride: None
   DepthTest: false
-  TwoSided: false
+  TwoSided: true
 - !<ScreenTransform/7805de0d-9500-4878-a74b-af2395112745>
   PrefabRemaps:
     []

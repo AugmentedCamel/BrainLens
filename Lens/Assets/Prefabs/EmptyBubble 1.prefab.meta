@@ -72,6 +72,7 @@
     - !<own> b7623ac9-a94f-42ad-9e4e-c66365a2b2e0
   Components:
     - !<own> e7f8b055-35b2-46ef-b6dd-9d62ddaedab9
+    - !<own> 4c7b781d-d0b4-43ee-be9f-39d808ab0f8b
 - !<ScreenTransform/0cad2524-eafb-4c6f-8ded-4c57dbfb42f1>
   PrefabRemaps:
     []
@@ -292,6 +293,31 @@
     bottom: 0.000000
     right: 0.000000
     top: 0.000000
+- !<ScriptComponent/4c7b781d-d0b4-43ee-be9f-39d808ab0f8b>
+  PrefabRemaps:
+    []
+  Name: Billboard
+  Enabled: true
+  ScriptAsset: !<reference> b5593251-a0da-4491-8561-2e0dccd715bc
+  ScriptInputsDefault:
+    _yAxisEnabled: true
+    _zAxisEnabled: true
+    _axisBufferDegrees: true
+    _axisEasing: true
+    duration: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      _xAxisEnabled: true
+      _yAxisEnabled: true
+      _zAxisEnabled: false
+      _axisBufferDegrees: !<Vec3> {x: 0.000000, y: 0.000000, z: 0.000000}
+      _axisEasing: !<Vec3> {x: 1.000000, y: 1.000000, z: 1.000000}
+      duration: 0.033000
+  ScriptTypes:
+    "":
+      {}
 - !<ScriptComponent/6e6bb760-c07a-45cb-a23b-67785f0e9424>
   PrefabRemaps:
     []
@@ -340,20 +366,20 @@
   MeshShadowMode: None
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
-  Text: Text
+  Text: Text much longer than five words
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
   SizeToFit: false
-  FontSize: 48
+  FontSize: 60
   Font: !<reference> 00000000-0000-0000-0000-000000000000
   LayoutRect:
-    left: -7.500000
+    left: -3.100000
     bottom: -2.250000
-    right: 7.500000
+    right: 3.100000
     top: 2.250000
   OverflowVertical: Overflow
-  OverflowHorizontal: Overflow
+  OverflowHorizontal: Wrap
   Fill: !<TextFill>
     Mode: Solid
     Color: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
@@ -403,7 +429,7 @@
     LineSpacing: 1.000000
     CapitalizationOverride: None
   DepthTest: false
-  TwoSided: false
+  TwoSided: true
 - !<ObjectPrefabAssetData/7a84ccf8-09dd-4177-9e70-fdc4c4517259>
   SourceRemaps:
     - 08e94799-30f9-4c62-ac34-6c85389ca36c: 7b889de7-51eb-4f27-888d-527fb2c85bc6
@@ -412,6 +438,7 @@
     - 23216678-f698-44c7-9dc5-6a46d23047a8: d83707e5-8c9c-4e14-89b8-627238ec80bb
     - 239a5462-f0f9-468b-b949-5209c0e44562: e89b5f1b-1720-4c17-b8bd-c9fa52288031
     - 2492ce40-d9c7-46ac-b165-15edb014729e: 6e6bb760-c07a-45cb-a23b-67785f0e9424
+    - 24c3c42c-2c9a-401c-a0f6-a08e977332ad: 4c7b781d-d0b4-43ee-be9f-39d808ab0f8b
     - 2733b85e-66ab-4223-8a77-010712677fac: d38f8495-9843-47f5-a6f7-b4ee43064dab
     - 2a53469b-2bdb-4183-a933-0074dc9f9e12: 0869561f-7672-418a-a0f2-9ec018d3d64f
     - 2dd0cbae-872b-4622-b9f7-20368ede6268: 374a3ce3-2eaa-4ce4-938b-c56789ad3f40
@@ -744,7 +771,7 @@
   BodySetting: Density
   BodySettingValue: 1.000000
   Damping: 0.060000
-  AngularDamping: 0.020000
+  AngularDamping: 1.000000
 - !<SceneObject/ce7fd4e8-fdaa-48ce-bff6-18d0d52d3881>
   PrefabRemaps:
     []
