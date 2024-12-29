@@ -8,7 +8,9 @@
     - !<own> a0571f92-252c-465f-a971-e1d4a2b75588
     - !<own> c673595d-83e1-4186-a2d1-2f448a6eb5ef
     - !<own> 787c94f6-961b-4583-80f6-1ff5bea929ba
-    - !<own> 069c8144-1878-4190-b6dc-2fd6aac15ef9
+    - !<own> 503c5ba2-95fb-4ce1-b5f8-316f817ce50c
+    - !<own> 4f8d012b-1ed0-4668-a431-88edb3e43d3a
+    - !<own> 6f43def8-b048-4dff-81a1-8f71f2f6344d
   layers: !<Layers/267ee9a7-aff2-4f9d-9a49-f71214747d03>
     userLayers:
       - |
@@ -320,6 +322,23 @@
     - !<own> cf2d9e76-9520-473b-8b9b-68ce183d22ca
   Components:
     []
+- !<AudioComponent/050e73fb-b2c3-4321-84aa-270c81ea77f6>
+  PrefabRemaps:
+    []
+  Name: Audio
+  Enabled: true
+  AudioTrack: !<reference> 00000000-0000-0000-0000-000000000000
+  EnableAutoplayLoop: false
+  Volume: 1.000000
+  EnableMixToSnap: false
+  RecordVolume: 1.000000
+  EnableSpatialAudio: false
+  EnableDistanceEffect: false
+  CurveType: Logarithm
+  MinDistance: 0.000000
+  MaxDistance: 100.000000
+  EnableDirectivityEffect: false
+  EnablePositionEffect: false
 - !<SceneObject/05ab905d-7685-4e29-9db5-9042078af2d6>
   PrefabRemaps:
     []
@@ -350,21 +369,6 @@
     - !<own> 3e6b8217-94b7-472f-b6e6-977ac0c0a970
   Components:
     - !<own> f3232bae-1cac-4da0-80d3-db319bb08a59
-- !<SceneObject/069c8144-1878-4190-b6dc-2fd6aac15ef9>
-  PrefabRemaps:
-    []
-  Name: SpeechModule
-  Enabled: false
-  Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
-  Children:
-    []
-  Components:
-    - !<own> fd03c556-9ace-4832-b79f-313fd0dec165
 - !<ScreenTransform/06d747fb-e382-485f-a73c-f196500e6cf9>
   PrefabRemaps:
     []
@@ -552,6 +556,25 @@
     - !<own> 9827271d-d758-4004-bc20-03cf1e136d1c
   Components:
     []
+- !<ScriptComponent/0c1707cf-3bbd-4342-a4a8-3ce0dad42989>
+  PrefabRemaps:
+    []
+  Name: Simple Transcribe
+  Enabled: true
+  ScriptAsset: !<reference> 708f13a3-3475-46b1-8c54-b845a0c76051
+  ScriptInputsDefault:
+    boosts: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      vmlModule: !<reference.VoiceMLModule> cf8dd538-c132-4be4-98b4-0234b8bf60b5
+      boosts: !<string[]>
+        []
+      boostsAmount: !<float> 6.000000
+  ScriptTypes:
+    "":
+      {}
 - !<SceneObject/0deb320d-887e-4b1a-b988-f11b2c4d951b>
   PrefabRemaps:
     []
@@ -1087,6 +1110,22 @@
     - !<own> 1b99283b-6388-4d39-a423-7be97ff2f32d
   Components:
     []
+- !<ScriptComponent/2d94faa2-0c84-4f46-8a62-b29e4c9c3647>
+  PrefabRemaps:
+    []
+  Name: SpeechModule
+  Enabled: true
+  ScriptAsset: !<reference> 1d2ef240-f921-4ead-b954-a8c17fe5a35c
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      {}
+  ScriptTypes:
+    "":
+      {}
 - !<SceneObject/309860a1-e8fd-49a7-8b08-343086fa08dd>
   PrefabRemaps:
     []
@@ -2920,6 +2959,36 @@
   ScriptTypes:
     "":
       {}
+- !<SceneObject/4f8d012b-1ed0-4668-a431-88edb3e43d3a>
+  PrefabRemaps:
+    []
+  Name: Start Transcribing
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 2d94faa2-0c84-4f46-8a62-b29e4c9c3647
+- !<SceneObject/503c5ba2-95fb-4ce1-b5f8-316f817ce50c>
+  PrefabRemaps:
+    []
+  Name: Simple Transcribe
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 0c1707cf-3bbd-4342-a4a8-3ce0dad42989
 - !<SceneObject/50f48cde-a492-4587-8b76-26cff1adec60>
   PrefabRemaps:
     []
@@ -4817,6 +4886,21 @@
     bottom: -16.000000
     right: 0.000000
     top: 16.000000
+- !<SceneObject/6f43def8-b048-4dff-81a1-8f71f2f6344d>
+  PrefabRemaps:
+    []
+  Name: Audio
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 050e73fb-b2c3-4321-84aa-270c81ea77f6
 - !<SceneObject/6f50df52-5045-47a8-839c-bbd20bc99bb5>
   PrefabRemaps:
     []
@@ -5151,7 +5235,7 @@
     - fc64b270-5f1e-4bb1-ab6b-a1a40b6ae26d: c980be48-21d8-478f-b146-efde2ac3fffe
     - fd4edb27-5f17-4e3e-8ad7-72bb39dd3ec8: 7fb49df5-76aa-4a3f-b4e1-ec6dbc1485c8
   Name: Speech Recognition__PLACE_IN_SCENE
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -8544,22 +8628,6 @@
   ScriptInputs:
     "":
       {}
-  ScriptTypes:
-    "":
-      {}
-- !<ScriptComponent/fd03c556-9ace-4832-b79f-313fd0dec165>
-  PrefabRemaps:
-    []
-  Name: SpeechModule
-  Enabled: true
-  ScriptAsset: !<reference> 1d2ef240-f921-4ead-b954-a8c17fe5a35c
-  ScriptInputsDefault:
-    {}
-  ScriptTypesDefault:
-    {}
-  ScriptInputs:
-    "":
-      vmlModule: !<reference.VoiceMLModule> cf8dd538-c132-4be4-98b4-0234b8bf60b5
   ScriptTypes:
     "":
       {}

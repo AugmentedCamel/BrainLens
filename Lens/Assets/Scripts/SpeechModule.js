@@ -1,29 +1,35 @@
-//@input Asset.VoiceMLModule vmlModule {"Label": "Voice ML Module"}
 
-var options = VoiceML.ListeningOptions.create();
+// A flag to ensure it runs only once
+var hasStarted = false;
 
-var onListeningEnabledHandler = function () { //when the mic is enabled
-    script.vmlModule.startListening(options);
-    print("start listening");
-};
+// Awake function that's triggered once
+function awake() {
+    if (!hasStarted) {
+        hasStarted = true; // Set the flag to prevent future calls
+        global.startVoiceMLTranscribe(callback); // Start transcription
+        print("log started")
+    }
+}
 
-var onListeningDisabledHandler = function () {
-    script.vmlModule.stopListening();
-    print("stop listening");
-};
+function callback(eventArgs){
+    // intermediate transcription
+    if(eventArgs.transcription.trim() == "") return;
+    print(eventArgs.transcription);
+    if (eventArgs.transcription == "time") {
+        var currentDate = new Date();
+        currentDate.setHours(currentDate.getHours() + 2);
+        global.getTTSResults("The time is: " + global.localizationSystem.getTimeFormatted(currentDate));
+        print("The current time is: " + global.localizationSystem.getTimeFormatted(currentDate));
+    }
+    if (eventArgs.transcription == "Time") {
+        var currentDate = new Date();
+        currentDate.setHours(currentDate.getHours() + 2);
+        global.getTTSResults("The time is: " + global.localizationSystem.getTimeFormatted(currentDate));
+        print("The current time is: " + global.localizationSystem.getTimeFormatted(currentDate));
+    }
+    // final transcription
+    if(!eventArgs.isFinalTranscription) return;
+    print("Final Transcription: " + eventArgs.transcription);
+}
 
-var onListeningErrorHandler = function (eventErrorArgs) {
-    print(
-        'Error: ' + eventErrorArgs.error + ' desc: ' + eventErrorArgs.description
-    );
-};
-
-var onUpdateListeningEventHandler = function(eventArgs) {
-...
-};
-
-//VoiceML Callbacks
-script.vmlModule.onListeningUpdate.add(onUpdateListeningEventHandler);
-script.vmlModule.onListeningError.add(onListeningErrorHandler);
-script.vmlModule.onListeningEnabled.add(onListeningEnabledHandler);
-script.vmlModule.onListeningDisabled.add(onListeningDisabledHandler);
+awake();

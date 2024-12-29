@@ -1,20 +1,20 @@
-- !<AssetImportMetadata/5384df30-f344-4b0f-882d-b48bfc0d39c5>
+- !<AssetImportMetadata/81bfa1aa-76e9-4ae8-8887-11aef0bf0b68>
   ImportedAssetIds:
-    JavaScriptAsset: !<reference> 1d2ef240-f921-4ead-b954-a8c17fe5a35c
+    JavaScriptAsset: !<reference> 708f13a3-3475-46b1-8c54-b845a0c76051
   ImporterName: JavaScriptAssetImporter
-  PrimaryAsset: !<reference> 1d2ef240-f921-4ead-b954-a8c17fe5a35c
+  PrimaryAsset: !<reference> 708f13a3-3475-46b1-8c54-b845a0c76051
   PackageType: NotAPackage
   PackagePolicy: CannotBeUnpacked
   ExtraData:
     {}
   AssetDataMap:
-    JavaScriptAsset: !<own> da73781a-4bd5-4be5-ae70-18d4980ff553
+    JavaScriptAsset: !<own> b050ddbe-e986-4bfe-ab3f-c4a1546eb978
   DependentFiles:
     []
-  ImporterSettings: !<AssetImporterSettings/4ab78d20-850d-4f21-ba24-6a195b5023bd>
+  ImporterSettings: !<AssetImporterSettings/e1ffe637-7abf-44b9-9b26-68dc3c0f76ad>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
-- !<ScriptAssetData/da73781a-4bd5-4be5-ae70-18d4980ff553>
+- !<ScriptAssetData/b050ddbe-e986-4bfe-ab3f-c4a1546eb978>
   SvgIcon: ""
   Description: ""
   InternalVersion: 0
@@ -26,12 +26,16 @@
   CurrentVisibility: Editable
   MaxVisibility: Editable
   ScriptInputsHidden:
-    {}
+    boosts: false
+    boostsAmount: false
+    vmlModule: false
   ScriptTypesHidden:
     {}
   DefaultScriptInputs:
-    -
-      {}
+    - vmlModule: !<reference.VoiceMLModule> 00000000-0000-0000-0000-000000000000
+      boosts: !<string[]>
+        []
+      boostsAmount: !<float> 0.000000
   ScriptTypes:
     -
       {}
