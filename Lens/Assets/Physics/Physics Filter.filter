@@ -2,6 +2,6 @@
   PackagePath: ""
   IncludeStatic: true
   IncludeDynamic: true
-  IncludeIntangible: false
+  IncludeIntangible: true
   OnlyLayers: 0
   SkipLayers: 0

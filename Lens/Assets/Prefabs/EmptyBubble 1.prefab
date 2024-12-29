@@ -4,6 +4,29 @@
     - !<own> 23216678-f698-44c7-9dc5-6a46d23047a8
   LazyLoading: false
   RetainAssets: true
+- !<BodyComponent/121ea015-a3d7-4827-b453-a8bffa6a8fd5>
+  PrefabRemaps:
+    []
+  Name: Physics Body
+  Enabled: true
+  Shape: !<Sphere>
+    FitVisual: true
+    Radius: 6.000000
+  Matter: !<reference> 459a391d-1120-48a3-9f4d-94c540b1c49b
+  Filter: !<reference> f602798b-77e2-4b5e-9317-d65ece57e1c8
+  OverlapFilter: !<reference> f5664674-4501-4b3e-9d14-0a084770866e
+  WorldSettings: !<reference> f2679a87-7b45-4b6e-8dfd-658d49537c90
+  EnableSmoothing: false
+  PositionTension: 30.000000
+  RotationTension: 30.000000
+  ForceCompound: false
+  Intangible: false
+  ShowCollider: true
+  Dynamic: true
+  BodySetting: Density
+  BodySettingValue: 1.000000
+  Damping: 0.060000
+  AngularDamping: 0.020000
 - !<SceneObject/23216678-f698-44c7-9dc5-6a46d23047a8>
   PrefabRemaps:
     []
@@ -20,6 +43,7 @@
   Components:
     - !<own> 2f09c7c0-2839-44d2-bf0a-66ac8194cc9a
     - !<own> 952a3e55-789a-47c1-abf4-05fdf400dcd8
+    - !<own> 121ea015-a3d7-4827-b453-a8bffa6a8fd5
 - !<ScriptComponent/2492ce40-d9c7-46ac-b165-15edb014729e>
   PrefabRemaps:
     []
@@ -91,7 +115,7 @@
   PrefabRemaps:
     []
   Name: Physics Body
-  Enabled: true
+  Enabled: false
   Shape: !<Sphere>
     FitVisual: true
     Radius: 6.000000
@@ -104,7 +128,7 @@
   RotationTension: 30.000000
   ForceCompound: false
   Intangible: false
-  ShowCollider: false
+  ShowCollider: true
   Dynamic: true
   BodySetting: Density
   BodySettingValue: 1.000000
@@ -131,13 +155,13 @@
   PrefabRemaps:
     []
   Name: Physics Collider
-  Enabled: true
+  Enabled: false
   Shape: !<Sphere>
     FitVisual: true
     Radius: 6.000000
   Matter: !<reference> 00000000-0000-0000-0000-000000000000
-  Filter: !<reference> b08de880-5375-4efe-ba3b-3af4761a6852
-  OverlapFilter: !<reference> 00000000-0000-0000-0000-000000000000
+  Filter: !<reference> f602798b-77e2-4b5e-9317-d65ece57e1c8
+  OverlapFilter: !<reference> b08de880-5375-4efe-ba3b-3af4761a6852
   WorldSettings: !<reference> f2679a87-7b45-4b6e-8dfd-658d49537c90
   EnableSmoothing: false
   PositionTension: 30.000000

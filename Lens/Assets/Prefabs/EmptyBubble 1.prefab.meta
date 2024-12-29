@@ -107,6 +107,7 @@
       {}
 - !<ObjectPrefabAssetData/7a84ccf8-09dd-4177-9e70-fdc4c4517259>
   SourceRemaps:
+    - 121ea015-a3d7-4827-b453-a8bffa6a8fd5: c98a0d3c-ed60-4b11-a6c4-5710dfdad483
     - 23216678-f698-44c7-9dc5-6a46d23047a8: d83707e5-8c9c-4e14-89b8-627238ec80bb
     - 2492ce40-d9c7-46ac-b165-15edb014729e: 6e6bb760-c07a-45cb-a23b-67785f0e9424
     - 2f09c7c0-2839-44d2-bf0a-66ac8194cc9a: aed65937-2c54-4986-b982-88e1f1fba074
@@ -143,13 +144,13 @@
   PrefabRemaps:
     []
   Name: Physics Collider
-  Enabled: true
+  Enabled: false
   Shape: !<Sphere>
     FitVisual: true
     Radius: 6.000000
   Matter: !<reference> 00000000-0000-0000-0000-000000000000
-  Filter: !<reference> b08de880-5375-4efe-ba3b-3af4761a6852
-  OverlapFilter: !<reference> 00000000-0000-0000-0000-000000000000
+  Filter: !<reference> f602798b-77e2-4b5e-9317-d65ece57e1c8
+  OverlapFilter: !<reference> b08de880-5375-4efe-ba3b-3af4761a6852
   WorldSettings: !<reference> f2679a87-7b45-4b6e-8dfd-658d49537c90
   EnableSmoothing: false
   PositionTension: 30.000000
@@ -173,7 +174,7 @@
   ScriptTypes:
     "":
       {}
-- !<BodyComponent/d1d59750-eb1c-46b5-a86d-0cec828bf46b>
+- !<BodyComponent/c98a0d3c-ed60-4b11-a6c4-5710dfdad483>
   PrefabRemaps:
     []
   Name: Physics Body
@@ -190,7 +191,30 @@
   RotationTension: 30.000000
   ForceCompound: false
   Intangible: false
-  ShowCollider: false
+  ShowCollider: true
+  Dynamic: true
+  BodySetting: Density
+  BodySettingValue: 1.000000
+  Damping: 0.060000
+  AngularDamping: 0.020000
+- !<BodyComponent/d1d59750-eb1c-46b5-a86d-0cec828bf46b>
+  PrefabRemaps:
+    []
+  Name: Physics Body
+  Enabled: false
+  Shape: !<Sphere>
+    FitVisual: true
+    Radius: 6.000000
+  Matter: !<reference> 459a391d-1120-48a3-9f4d-94c540b1c49b
+  Filter: !<reference> f602798b-77e2-4b5e-9317-d65ece57e1c8
+  OverlapFilter: !<reference> f5664674-4501-4b3e-9d14-0a084770866e
+  WorldSettings: !<reference> f2679a87-7b45-4b6e-8dfd-658d49537c90
+  EnableSmoothing: false
+  PositionTension: 30.000000
+  RotationTension: 30.000000
+  ForceCompound: false
+  Intangible: false
+  ShowCollider: true
   Dynamic: true
   BodySetting: Density
   BodySettingValue: 1.000000
@@ -212,3 +236,4 @@
   Components:
     - !<own> aed65937-2c54-4986-b982-88e1f1fba074
     - !<own> 9a578bcb-295c-4bbc-a085-60f51c74597b
+    - !<own> c98a0d3c-ed60-4b11-a6c4-5710dfdad483

@@ -476,7 +476,7 @@
   PrefabRemaps:
     []
   Name: Physics Body
-  Enabled: true
+  Enabled: false
   Shape: !<Sphere>
     FitVisual: true
     Radius: 6.000000
@@ -489,7 +489,7 @@
   RotationTension: 30.000000
   ForceCompound: false
   Intangible: false
-  ShowCollider: false
+  ShowCollider: true
   Dynamic: true
   BodySetting: Density
   BodySettingValue: 1.000000
@@ -736,9 +736,9 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 0.000001, y: -0.000001, z: -0.000001}
-    rotation: {x: 0.000000, y: -0.000000, z: -0.000000}
-    scale: {x: 0.999999, y: 0.999999, z: 0.999999}
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
   Children:
     []
@@ -859,8 +859,8 @@
     Mesh: !<reference> b2d2360c-44b0-4f99-a5ad-3651706e0e4b
     Convex: false
     Skin: !<reference> 32346fd9-8168-4666-87d9-78060a1ebed2
-  Matter: !<reference> 00000000-0000-0000-0000-000000000000
-  Filter: !<reference> b08de880-5375-4efe-ba3b-3af4761a6852
+  Matter: !<reference> 459a391d-1120-48a3-9f4d-94c540b1c49b
+  Filter: !<reference> f602798b-77e2-4b5e-9317-d65ece57e1c8
   OverlapFilter: !<reference> 00000000-0000-0000-0000-000000000000
   WorldSettings: !<reference> f2679a87-7b45-4b6e-8dfd-658d49537c90
   EnableSmoothing: false
@@ -1902,6 +1902,7 @@
     - aaa47152-e69c-48d4-b997-85dc628509df: 8afd13cc-c81e-432e-932d-95fdbcaf7800
     - aca952ad-9202-47f1-a16b-fff95ad5c753: b30354a9-f426-446b-b140-85d8ec99ad5c
     - baf2e8e0-409f-4518-8816-63c8180385a1: 2f09c7c0-2839-44d2-bf0a-66ac8194cc9a
+    - be77d3a2-7d4b-4093-b66d-bcc347b030ea: 121ea015-a3d7-4827-b453-a8bffa6a8fd5
   Name: EmptyBubble
   Enabled: true
   Layers: 1
@@ -1915,6 +1916,7 @@
   Components:
     - !<own> baf2e8e0-409f-4518-8816-63c8180385a1
     - !<own> a9620e44-e34a-4b26-8a83-8fc8dd7d8f14
+    - !<own> be77d3a2-7d4b-4093-b66d-bcc347b030ea
 - !<SceneObject/a114455b-6a9f-4990-a3cc-fa88e4a4829a>
   PrefabRemaps:
     []
@@ -2024,13 +2026,13 @@
   PrefabRemaps:
     []
   Name: Physics Collider
-  Enabled: true
+  Enabled: false
   Shape: !<Sphere>
     FitVisual: true
     Radius: 6.000000
   Matter: !<reference> 00000000-0000-0000-0000-000000000000
-  Filter: !<reference> b08de880-5375-4efe-ba3b-3af4761a6852
-  OverlapFilter: !<reference> 00000000-0000-0000-0000-000000000000
+  Filter: !<reference> f602798b-77e2-4b5e-9317-d65ece57e1c8
+  OverlapFilter: !<reference> b08de880-5375-4efe-ba3b-3af4761a6852
   WorldSettings: !<reference> f2679a87-7b45-4b6e-8dfd-658d49537c90
   EnableSmoothing: false
   PositionTension: 30.000000
@@ -2131,16 +2133,16 @@
     Mesh: !<reference> 735f7248-824f-40d5-8573-c0cfbbd03abf
     Convex: false
     Skin: !<reference> 03f7bc43-5636-41fb-a9fc-1dbf378a0dd5
-  Matter: !<reference> 00000000-0000-0000-0000-000000000000
+  Matter: !<reference> 459a391d-1120-48a3-9f4d-94c540b1c49b
   Filter: !<reference> b08de880-5375-4efe-ba3b-3af4761a6852
-  OverlapFilter: !<reference> 00000000-0000-0000-0000-000000000000
+  OverlapFilter: !<reference> f5664674-4501-4b3e-9d14-0a084770866e
   WorldSettings: !<reference> f2679a87-7b45-4b6e-8dfd-658d49537c90
   EnableSmoothing: false
   PositionTension: 30.000000
   RotationTension: 30.000000
   ForceCompound: false
   Intangible: false
-  ShowCollider: true
+  ShowCollider: false
 - !<SceneObject/b27cfdfa-9f62-4102-83e8-b9bedf8c2910>
   PrefabRemaps:
     []
@@ -2247,6 +2249,29 @@
     - !<own> d180e208-2df8-4507-8437-213a1fbd5da6
   Components:
     []
+- !<BodyComponent/be77d3a2-7d4b-4093-b66d-bcc347b030ea>
+  PrefabRemaps:
+    []
+  Name: Physics Body
+  Enabled: true
+  Shape: !<Sphere>
+    FitVisual: true
+    Radius: 6.000000
+  Matter: !<reference> 459a391d-1120-48a3-9f4d-94c540b1c49b
+  Filter: !<reference> f602798b-77e2-4b5e-9317-d65ece57e1c8
+  OverlapFilter: !<reference> f5664674-4501-4b3e-9d14-0a084770866e
+  WorldSettings: !<reference> f2679a87-7b45-4b6e-8dfd-658d49537c90
+  EnableSmoothing: false
+  PositionTension: 30.000000
+  RotationTension: 30.000000
+  ForceCompound: false
+  Intangible: false
+  ShowCollider: true
+  Dynamic: true
+  BodySetting: Density
+  BodySettingValue: 1.000000
+  Damping: 0.060000
+  AngularDamping: 0.020000
 - !<SceneObject/c673595d-83e1-4186-a2d1-2f448a6eb5ef>
   PrefabRemaps:
     []
@@ -2555,7 +2580,7 @@
   StretchMode: Stretch
   VerticalAlignment: Center
   HorizontalAlignment: Center
-  MeshShadowMode: Caster
+  MeshShadowMode: None
   ShadowColor: {x: 1.000000, y: 1.000000, z: 0.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Materials:
