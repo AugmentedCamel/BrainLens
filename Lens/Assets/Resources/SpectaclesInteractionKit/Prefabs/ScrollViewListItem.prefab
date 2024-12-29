@@ -111,7 +111,7 @@
   PrefabRemaps:
     []
   Name: PinchButton
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform:
     position: {x: 0.825276, y: 0.000000, z: 0.000000}
@@ -573,7 +573,7 @@
   PrefabRemaps:
     []
   Name: ScrollViewListItem
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: 0.300000, z: 0.000000}
