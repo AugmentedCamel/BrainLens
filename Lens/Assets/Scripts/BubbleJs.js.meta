@@ -1,0 +1,40 @@
+- !<AssetImportMetadata/f0d80b38-3eb6-48af-8b48-5d4060202c93>
+  ImportedAssetIds:
+    JavaScriptAsset: !<reference> db33b09d-20af-4c80-8b02-cb9e98c21747
+  ImporterName: JavaScriptAssetImporter
+  PrimaryAsset: !<reference> db33b09d-20af-4c80-8b02-cb9e98c21747
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    JavaScriptAsset: !<own> 6f0f111b-123a-41fb-bf91-4e5b898b57c8
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings/9b79eb23-33a7-44fd-a228-d42f8e6a06ee>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ScriptAssetData/6f0f111b-123a-41fb-bf91-4e5b898b57c8>
+  SvgIcon: ""
+  Description: ""
+  InternalVersion: 0
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 00000000-0000-0000-0000-000000000000
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    brainText: false
+    speechScript: false
+  ScriptTypesHidden:
+    {}
+  DefaultScriptInputs:
+    - brainText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      otherScript: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+      speechscript: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+      speechScript: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}

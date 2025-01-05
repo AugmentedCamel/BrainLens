@@ -7,6 +7,8 @@
 // Results are sent to the given callback function. If none was given, the following example will be used:
 // THanks Max and Xulipa, greetings Camel
 
+
+
 function exampleCallback(eventArgs){
     // intermediate transcription
     if(eventArgs.transcription.trim() == "") return;

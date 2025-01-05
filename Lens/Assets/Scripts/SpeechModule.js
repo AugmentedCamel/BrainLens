@@ -3,6 +3,7 @@ global.startVoiceMLTranscribe(callback);
 
 //@input bool transcripitonText 
 //@input Component.Text screenTextTranscription {"showIf":"transcripitonText", "label": "Transcription text component"}
+var latestTranscription = "";
 
 function callback(eventArgs){
     // intermediate transcription
@@ -22,6 +23,17 @@ function callback(eventArgs){
     }
     // final transcription
     if(!eventArgs.isFinalTranscription) return;
+    setFinalTranscription(eventArgs.transcription);
     print("Final BAD Transcription: " + eventArgs.transcription);
     script.screenTextTranscription.text = eventArgs.transcription;
 }
+
+function setFinalTranscription(text){
+    latestTranscription = text;
+}
+
+function getFinalTranscription(){
+    return latestTranscription;
+}
+
+script.api.getFinalTranscription = getFinalTranscription;

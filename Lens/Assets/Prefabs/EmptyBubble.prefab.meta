@@ -73,12 +73,12 @@
   Enabled: true
   ScriptAsset: !<reference> e69376b5-065a-4838-9444-42550f71858a
   ScriptInputsDefault:
-    {}
+    bubbleText: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
     "":
-      {}
+      bubbleText: !<reference.Text> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     "":
       {}

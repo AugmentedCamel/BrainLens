@@ -5,12 +5,14 @@ export class ExampleHandScript extends BaseScriptComponent {
   
   @input objectPrefab:ObjectPrefab;
   //@input handFollower:SceneObject;
-  
+  //@input speechModule:SpeechModule;
   //physicsBody:BodyComponent 
   
   bubbleStartPoint: vec3;
   latestBubble: SceneObject;
-
+  bubbleText: Text;
+  
+  
   private handInputData = SIK.HandInputData;
   private rightHand = this.handInputData.getHand('right');
   isPinching: boolean;
@@ -35,6 +37,7 @@ export class ExampleHandScript extends BaseScriptComponent {
     if (this.isPinching) {
       
       this.latestBubble.getTransform().setWorldPosition(this.rightHand.thumbPad.position);
+      
       // this should be done with smoothfollower
     }
   }
@@ -49,6 +52,9 @@ export class ExampleHandScript extends BaseScriptComponent {
     
     // physic things
     this.latestBubble.getComponent("Physics.BodyComponent").enabled = false;
+    
+    //text things
+    
     
   }
   
